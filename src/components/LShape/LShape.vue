@@ -1,6 +1,6 @@
 <template>
   <div 
-    :style="styleProps" 
+    :style="(styleProps as any)" 
     class="l-shape-component" 
     @click.prevent="handleClick"
   ></div>

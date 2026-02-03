@@ -1,6 +1,6 @@
 <template>
   <img 
-    :style="styleProps" 
+    :style="(styleProps as any)" 
     class="l-image-component" 
     @click.prevent="handleClick"
     :src="src"
@@ -10,12 +10,17 @@
 import { defineComponent } from 'vue'
 import useComponentCommon from '../../hooks/useComponentCommon'
 import { transformToComponentProps, imageDefaultProps, imageStylePropsNames } from '../../defaultProps'
+
 const defaultProps = transformToComponentProps(imageDefaultProps)
 
 // array that contains style props
 export default defineComponent({
   name: 'l-image',
   props: {
+    src: {
+      type: String,
+      default: ''
+    },
     ...defaultProps
   },
   setup (props) {
@@ -26,7 +31,7 @@ export default defineComponent({
        styleProps,
        handleClick
     }
-  }
+  },
 })
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <component :is="tag" :style="styleProps" class="l-text-component" @click="handleClick">
-    {{text}}
+    {{ text }}
   </component>
 </template>
 <script lang="ts">
@@ -15,6 +15,10 @@ export default defineComponent({
     tag: {
       type: String,
       default: 'div'
+    },
+    text: {
+      type: String,
+      default: ''
     },
     ...defaultProps
   },

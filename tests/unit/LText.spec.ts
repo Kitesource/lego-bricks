@@ -2,21 +2,21 @@ import { shallowMount } from '@vue/test-utils'
 import LText from '../../src/components/LText'
 import { textDefaultProps } from '../../src/defaultProps'
 describe('LText.vue', () => {
-  const { location } = window 
+  const { location } = window
   beforeEach(() => {
     Object.defineProperty(window, 'location', {
       writable: true,
-      value: { href: '' }
+      value: { href: '' },
     })
   })
   afterEach(() => {
-    window.location = location
+    window.location = location as any
   })
   it('default LText render', () => {
     const msg = 'test'
     const props = {
       ...textDefaultProps,
-      text: msg
+      text: msg,
     }
     const wrapper = shallowMount(LText, { props })
     // should have the right text
@@ -35,7 +35,7 @@ describe('LText.vue', () => {
       ...textDefaultProps,
       actionType: 'url',
       url: 'http://dummy.url',
-      tag: 'h2'
+      tag: 'h2',
     }
     const wrapper = shallowMount(LText, { props })
     expect(wrapper.element.tagName).toBe('H2')
@@ -48,7 +48,7 @@ describe('LText.vue', () => {
       actionType: 'url',
       url: 'http://dummy.url',
       tag: 'h2',
-      isEditing: true
+      isEditing: true,
     }
     const wrapper = shallowMount(LText, { props })
     await wrapper.trigger('click')
