@@ -1,6 +1,6 @@
 <template>
   <div 
-    :style="(styleProps as any)" 
+    :style="styleProps" 
     class="l-shape-component" 
     @click.prevent="handleClick"
   ></div>
@@ -22,7 +22,7 @@ export default defineComponent({
     // 抽离并且获得 styleProps
     const { styleProps, handleClick } = useComponentCommon(props, shapeStylePropsNames)
     return {
-       styleProps,
+       styleProps: styleProps.value as any,
        handleClick
     }
   }

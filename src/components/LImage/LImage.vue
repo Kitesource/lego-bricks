@@ -1,6 +1,6 @@
 <template>
   <img 
-    :style="(styleProps as any)" 
+    :style="styleProps" 
     class="l-image-component" 
     @click.prevent="handleClick"
     :src="src"
@@ -28,7 +28,7 @@ export default defineComponent({
     // 抽离并且获得 styleProps
     const { styleProps, handleClick } = useComponentCommon(props, imageStylePropsNames)
     return {
-       styleProps,
+       styleProps: styleProps.value as any ,
        handleClick
     }
   },
