@@ -1,6 +1,6 @@
 {
   "name": "@smilekite/lego-bricks",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "author": "smiley",
   "scripts": {
     "serve": "vue-cli-service serve",
