@@ -22,7 +22,7 @@ export default defineComponent({
     // 抽离并且获得 styleProps
     const { styleProps, handleClick } = useComponentCommon(props, shapeStylePropsNames)
     return {
-       styleProps: styleProps.value as any,
+       styleProps,
        handleClick
     }
   }
