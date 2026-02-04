@@ -1,9 +1,9 @@
 <template>
   <img 
     :style="styleProps" 
+    :src="src"
     class="l-image-component" 
     @click.prevent="handleClick"
-    :src="src"
   />
 </template>
 <script lang="ts">
