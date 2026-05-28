@@ -45,6 +45,8 @@ export interface CommonComponentProps {
   // shadow and opacity
   boxShadow: string
   opacity: string
+  // clip
+  clipPath: string
   // position and x,y
   position: string
   left: string
@@ -70,6 +72,8 @@ export const commonDefaultProps: CommonComponentProps = {
   // shadow and opacity
   boxShadow: '0 0 0 #000000',
   opacity: '1',
+  // clip
+  clipPath: '',
   // position and x,y
   position: 'absolute',
   left: '0',
